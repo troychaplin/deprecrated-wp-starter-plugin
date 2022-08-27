@@ -1,11 +1,25 @@
 {
-    "name": "starter-block-plugin",
-    "version": "0.1.0",
-    "description": "Example static block scaffolded with Create Block tool.",
-    "author": "The WordPress Contributors",
-    "license": "GPL-2.0-or-later",
-    "main": "build/index.js",
+    "name": "block-plugin-starter",
+    "version": "1.0.0",
+    "description": "Starter block plugin for WordPress",
+    "main": "index.js",
+    "author": "Troy Chaplin",
+    "license": "ISC",
+    "keywords": [
+        "wordpress",
+        "gutengerg",
+        "blocks"
+    ],
+    "homepage": "https://github.com/troychaplin/block-plugin-starter#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/troychaplin/block-plugin-starter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/troychaplin/block-plugin-starter/issues"
+    },
     "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
         "build": "wp-scripts build",
         "format": "wp-scripts format",
         "lint:css": "wp-scripts lint-style",
@@ -15,6 +29,6 @@
         "start": "wp-scripts start"
     },
     "devDependencies": {
-        "@wordpress/scripts": "^23.7.2"
+        "@wordpress/scripts": "^24.0.0"
     }
 }

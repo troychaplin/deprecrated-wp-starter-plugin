@@ -22,13 +22,12 @@ wp.domReady(function () {
 		'core/list',
 		'core/paragraph',
 		'core/quote',
-		'core/table',
+		'core/table'
 	];
 
 	const allowedCustomBlocks = [
 		'starter-block/block-one',
-		'starter-block/block-two',
-		'starter-block/block-three'
+		'starter-block/block-two'
 	];
 
 	const allowedAdminBlocks = [
