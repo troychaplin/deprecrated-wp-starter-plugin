@@ -1,31 +1,31 @@
 //
 // ------
 // Remove core blocks
-wp.domReady( function() {
+wp.domReady(function () {
 	const allowedCoreBlocks = [
 		'core/embed',
-        'core/gallery',
-        'core/heading',
-        'core/image',
-        'core/list',
-        'core/paragraph',
-        'core/quote',
-        'core/table',
+		'core/gallery',
+		'core/heading',
+		'core/image',
+		'core/list',
+		'core/paragraph',
+		'core/quote',
+		'core/table',
 	];
 
 	const allowedCuBlocks = [
-        'cu-block/block-one',
-        'cu-block/block-two',
-        'cu-block/block-three'
+		'cu-block/block-one',
+		'cu-block/block-two',
+		'cu-block/block-three'
 	];
 
 	const allowedAdminBlocks = [
-        'cu-block/html',
-        'cu-block/shortcode'
+		'cu-block/html',
+		'cu-block/shortcode'
 	];
 
 	const allowedPluginBlocks = [
-        // 'gravityforms/form'
+		// 'gravityforms/form'
 	];
 
 	const allowedBlocks = allowedCoreBlocks.concat(allowedCuBlocks, allowedAdminBlocks, allowedPluginBlocks);
@@ -129,17 +129,3 @@ wp.domReady(function () {
 // ------
 // Remove other editor panels
 wp.data.dispatch('core/edit-post').removeEditorPanel('discussion-panel');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
