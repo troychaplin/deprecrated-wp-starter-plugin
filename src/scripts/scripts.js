@@ -1,5 +1,17 @@
 //
 // ------
+// Dump block styles to the console
+// https://soderlind.no/hide-block-styles-in-gutenberg/
+wp.domReady(() => {
+	wp.blocks.getBlockTypes().forEach((block) => {
+		if (_.isArray(block['styles'])) {
+			console.log(block.name, _.pluck(block['styles'], 'name'));
+		}
+	});
+});
+
+//
+// ------
 // Remove core blocks
 wp.domReady(function () {
 	const allowedCoreBlocks = [
@@ -13,22 +25,22 @@ wp.domReady(function () {
 		'core/table',
 	];
 
-	const allowedCuBlocks = [
-		'cu-block/block-one',
-		'cu-block/block-two',
-		'cu-block/block-three'
+	const allowedCustomBlocks = [
+		'starter-block/block-one',
+		'starter-block/block-two',
+		'starter-block/block-three'
 	];
 
 	const allowedAdminBlocks = [
-		'cu-block/html',
-		'cu-block/shortcode'
+		'core/html',
+		'core/shortcode'
 	];
 
 	const allowedPluginBlocks = [
 		// 'gravityforms/form'
 	];
 
-	const allowedBlocks = allowedCoreBlocks.concat(allowedCuBlocks, allowedAdminBlocks, allowedPluginBlocks);
+	const allowedBlocks = allowedCoreBlocks.concat(allowedCustomBlocks, allowedAdminBlocks, allowedPluginBlocks);
 
 	wp.blocks.getBlockTypes().forEach(function (coreBlocks) {
 		if (allowedBlocks.indexOf(coreBlocks.name) === -1) {
@@ -101,17 +113,6 @@ addFilter(
 	'cuBlockModifications',
 	extendCoreBlocks,
 );
-
-// ------
-// Dump block styles to the console
-// https://soderlind.no/hide-block-styles-in-gutenberg/
-// wp.domReady(() => {
-// 	wp.blocks.getBlockTypes().forEach((block) => {
-// 		if (_.isArray(block['styles'])) {
-// 			console.log(block.name, _.pluck(block['styles'], 'name'));
-// 		}
-// 	});
-// });
 
 //
 // ------
