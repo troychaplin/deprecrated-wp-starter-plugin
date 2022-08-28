@@ -20,7 +20,7 @@
 function remove_block_style() {
 	wp_register_script(
 		'block-config',
-		plugin_dir_url( __FILE__ ) . '/src/scripts/scripts.js',
+		plugin_dir_url( __FILE__ ) . '/src/script.js',
 		[ 'wp-blocks', 'wp-edit-post' ]
 	);
 	register_block_type( 'remove/block-style', ['editor_script' => 'block-config'] ); // register block editor script.
@@ -36,7 +36,7 @@ add_action( 'init', 'remove_block_style' );
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_test_block_init() {
-	register_block_type( __DIR__ . '/build/blocks/block-one' );
-	register_block_type( __DIR__ . '/build/blocks/block-two' );
+	register_block_type( __DIR__ . '/build/feature-card' );
+	register_block_type( __DIR__ . '/build/hero-image' );
 }
 add_action( 'init', 'create_block_test_block_init' );

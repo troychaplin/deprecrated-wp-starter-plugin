@@ -10,14 +10,6 @@
         "gutengerg",
         "blocks"
     ],
-    "homepage": "https://github.com/troychaplin/block-plugin-starter#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/troychaplin/block-plugin-starter.git"
-    },
-    "bugs": {
-        "url": "https://github.com/troychaplin/block-plugin-starter/issues"
-    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "wp-scripts build",
@@ -27,6 +19,14 @@
         "packages-update": "wp-scripts packages-update",
         "plugin-zip": "wp-scripts plugin-zip",
         "start": "wp-scripts start"
+    },
+    "homepage": "https://github.com/troychaplin/block-plugin-starter#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/troychaplin/block-plugin-starter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/troychaplin/block-plugin-starter/issues"
     },
     "devDependencies": {
         "@wordpress/scripts": "^24.0.0"
