@@ -1,34 +1,34 @@
 {
-    "name": "block-plugin-starter",
-    "version": "1.0.0",
-    "description": "Starter block plugin for WordPress",
-    "main": "index.js",
-    "author": "Troy Chaplin",
-    "license": "ISC",
-    "keywords": [
-        "wordpress",
-        "gutengerg",
-        "blocks"
-    ],
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "wp-scripts build",
-        "format": "wp-scripts format",
-        "lint:css": "wp-scripts lint-style",
-        "lint:js": "wp-scripts lint-js",
-        "packages-update": "wp-scripts packages-update",
-        "plugin-zip": "wp-scripts plugin-zip",
-        "start": "wp-scripts start"
-    },
-    "homepage": "https://github.com/troychaplin/block-plugin-starter#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/troychaplin/block-plugin-starter.git"
-    },
-    "bugs": {
-        "url": "https://github.com/troychaplin/block-plugin-starter/issues"
-    },
-    "devDependencies": {
-        "@wordpress/scripts": "^24.0.0"
-    }
+	"name": "cu-blocks",
+	"version": "1.0.0",
+	"description": "Block plugin for cutheme",
+	"main": "index.js",
+	"author": "Web Services",
+	"license": "ISC",
+	"keywords": [
+		"wordpress",
+		"gutengerg",
+		"blocks"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"homepage": "https://github.com/troychaplin/cu-blocks#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/troychaplin/cu-blocks.git"
+	},
+	"bugs": {
+		"url": "https://github.com/troychaplin/cu-blocks/issues"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^24.5.0"
+	}
 }
