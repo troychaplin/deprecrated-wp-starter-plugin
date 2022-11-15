@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -394,3 +395,6 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
+=======
+!function(){"use strict";var e,r={939:function(){var e=window.wp.blocks,r=window.wp.element,n=(window.wp.i18n,window.wp.blockEditor),o=JSON.parse('{"u2":"custom-block/hero-image"}');(0,e.registerBlockType)(o.u2,{edit:function(){return(0,r.createElement)("p",(0,n.useBlockProps)(),"Hero image editor view")},save:function(){return(0,r.createElement)("p",n.useBlockProps.save(),"Hero image saved content view")}})}},n={};function o(e){var t=n[e];if(void 0!==t)return t.exports;var i=n[e]={exports:{}};return r[e](i,i.exports,o),i.exports}o.m=r,e=[],o.O=function(r,n,t,i){if(!n){var u=1/0;for(f=0;f<e.length;f++){n=e[f][0],t=e[f][1],i=e[f][2];for(var c=!0,s=0;s<n.length;s++)(!1&i||u>=i)&&Object.keys(o.O).every((function(e){return o.O[e](n[s])}))?n.splice(s--,1):(c=!1,i<u&&(u=i));if(c){e.splice(f--,1);var a=t();void 0!==a&&(r=a)}}return r}i=i||0;for(var f=e.length;f>0&&e[f-1][2]>i;f--)e[f]=e[f-1];e[f]=[n,t,i]},o.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},function(){var e={325:0,795:0};o.O.j=function(r){return 0===e[r]};var r=function(r,n){var t,i,u=n[0],c=n[1],s=n[2],a=0;if(u.some((function(r){return 0!==e[r]}))){for(t in c)o.o(c,t)&&(o.m[t]=c[t]);if(s)var f=s(o)}for(r&&r(n);a<u.length;a++)i=u[a],o.o(e,i)&&e[i]&&e[i][0](),e[i]=0;return o.O(f)},n=self.webpackChunkcu_blocks=self.webpackChunkcu_blocks||[];n.forEach(r.bind(null,0)),n.push=r.bind(null,n.push.bind(n))}();var t=o.O(void 0,[795],(function(){return o(939)}));t=o.O(t)}();
+>>>>>>> master
