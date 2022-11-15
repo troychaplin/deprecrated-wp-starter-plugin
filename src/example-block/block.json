@@ -1,16 +1,16 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "custom-block/feature-card",
+	"name": "custom-block/example-block",
 	"version": "0.1.0",
-	"title": "Feature Card",
+	"title": "Example Block",
 	"category": "media",
-	"icon": "align-center",
-	"description": "Example of a feature card block",
+	"icon": "superhero-alt",
+	"description": "Example of a custom block",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "feature-card",
+	"textdomain": "example-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

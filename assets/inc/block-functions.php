@@ -17,8 +17,7 @@ if (! defined('WPINC')) {
  */
 function register_custom_blocks()
 {
-    register_block_type(BPS_BLOCKS_PATH . 'feature-card');
-    register_block_type(BPS_BLOCKS_PATH . 'hero-image');
+    register_block_type(WPSB_BLOCKS_PATH . 'example-block');
 }
 add_action('init', 'register_custom_blocks');
 
@@ -65,8 +64,7 @@ function set_allowed_blocks($final_blocks, $post)
 
     // Register custom blocks
     $custom_blocks = [
-        'custom-block/feature-card',
-        'custom-block/hero-image',
+        'custom-block/example-block',
     ];
 
     // Register admin specific blocks
