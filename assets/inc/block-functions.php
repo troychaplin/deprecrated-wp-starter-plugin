@@ -17,8 +17,8 @@ if (! defined('WPINC')) {
  */
 function register_custom_blocks()
 {
-    register_block_type(BPS_BLOCKS_PATH . 'feature-card');
-    register_block_type(BPS_BLOCKS_PATH . 'hero-image');
+    register_block_type(WPSB_BLOCKS_PATH . 'feature-card');
+    register_block_type(WPSB_BLOCKS_PATH . 'hero-image');
 }
 add_action('init', 'register_custom_blocks');
 

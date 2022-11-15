@@ -1,9 +1,9 @@
 {
-	"name": "cu-blocks",
-	"version": "1.0.0",
-	"description": "Block plugin for cutheme",
-	"main": "index.js",
-	"author": "Web Services",
+	"name": "block-plugin-starter",
+	"version": "0.0.1",
+	"description": "Starter gutenberg block plugin",
+	"main": "src/script.js",
+	"author": "Troy Chaplin",
 	"license": "ISC",
 	"keywords": [
 		"wordpress",
@@ -20,15 +20,18 @@
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start"
 	},
-	"homepage": "https://github.com/troychaplin/cu-blocks#readme",
+	"homepage": "https://github.com/troychaplin/block-plugin-starter#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/troychaplin/cu-blocks.git"
+		"url": "git+https://github.com/troychaplin/block-plugin-starter.git"
 	},
 	"bugs": {
-		"url": "https://github.com/troychaplin/cu-blocks/issues"
+		"url": "https://github.com/troychaplin/block-plugin-starter/issues"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^24.5.0"
+	},
+	"dependencies": {
+		"@wordpress/components": "^22.0.0"
 	}
 }
