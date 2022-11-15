@@ -1,0 +1,1 @@
+{"version":3,"file":"example-block/index.css","mappings":";;;AAAA;;EAAA,C","sources":["webpack://block-plugin-starter/./src/example-block/editor.scss"],"sourcesContent":["/**\n * These styles get applied to the back end only\n */\n"],"names":[],"sourceRoot":""}

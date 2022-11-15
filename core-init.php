@@ -16,8 +16,8 @@ define('WPSB_BLOCK_JS', plugins_url('src/', __FILE__));
 define('WPSB_BLOCKS_PATH', dirname(__FILE__).'/build/');
 
 // Load the Enqueues
-if (file_exists(WPSB_CORE_INC . 'block-enqueues.php')) {
-    require_once WPSB_CORE_INC . 'block-enqueues.php';
+if (file_exists(WPSB_CORE_INC . 'enqueues.php')) {
+    require_once WPSB_CORE_INC . 'enqueues.php';
 }
 
 // Load the Functions

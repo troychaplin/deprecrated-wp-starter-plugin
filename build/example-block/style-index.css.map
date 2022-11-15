@@ -1,0 +1,1 @@
+{"version":3,"file":"example-block/style-index.css","mappings":";;;AAAA;;EAAA;AAIA;EACC;EACA;AAAD,C","sources":["webpack://block-plugin-starter/./src/example-block/style.scss"],"sourcesContent":["/**\n * These styles get applied to the front and back end\n */\n\n.wp-block-custom-block-example-block {\n\tbackground-color: #0a4561;\n\tcolor: #fff;\n}\n"],"names":[],"sourceRoot":""}
