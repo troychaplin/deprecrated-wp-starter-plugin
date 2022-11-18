@@ -2,6 +2,13 @@
 
 Starter block plugin for WordPress
 
+## Getting Started
+
+- Drop a copy of this plugin into `wp-content/plugins`
+- In a terminal window navigate to the plugin
+- Run `npm install` to build dependencies
+- When developing run either `npm start` or `yarn start`
+
 ## Resources
 
 - [List of Gutenberg blocks](https://rudrastyh.com/gutenberg/remove-default-blocks.html#block_slugs)
