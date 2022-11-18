@@ -1,5 +1,5 @@
 wp.domReady(() => {
-    // Dump block styles to the console - https://soderlind.no/hide-block-styles-in-gutenberg/
+	// Dump block styles to the console - https://soderlind.no/hide-block-styles-in-gutenberg/
 	// wp.blocks.getBlockTypes().forEach((block) => {
 	// 	if (_.isArray(block['styles'])) {
 	// 		console.log(block.name, _.pluck(block['styles'], 'name'));
@@ -8,7 +8,7 @@ wp.domReady(() => {
 
 	const allowedEmbedBlocks = [
 		'instagram',
-        'soundcloud',
+		'soundcloud',
 		'twitter',
 		'youtube',
 		'vimeo'
@@ -21,8 +21,8 @@ wp.domReady(() => {
 		}
 	});
 
-    // Unregister core blocks
-    // wp.blocks.unregisterBlockType( 'core/heading' );
+	// Unregister core blocks
+	// wp.blocks.unregisterBlockType( 'core/heading' );
 
 	// Remove block styles - https://stackoverflow.com/questions/71637137/remove-property-from-wordpress-core-gutenberg-block
 	wp.blocks.unregisterBlockStyle('core/image', 'default');
@@ -50,67 +50,67 @@ function modifyCoreBlocks(settings, name) {
 	// Log block options before the return
 	// console.log({ settings, name });
 
-    const bulkModifyBlocks = [
-        "core/paragraph",
-        "core/list",
-        "core/quote",
-    ];
+	const bulkModifyBlocks = [
+		"core/paragraph",
+		"core/list",
+		"core/quote",
+	];
 	
 	// Remove color support from blocks
 	if (bulkModifyBlocks.includes(name)) {
-        return assign({}, settings, {
-            supports: merge(settings.supports, {
-                color: false,
-                typography: false,
-            })
-        });
+		return assign({}, settings, {
+			supports: merge(settings.supports, {
+				color: false,
+				typography: false,
+			})
+		});
 	}
 	
-    // Remove color support from blocks
+	// Remove color support from blocks
 	if (name === 'core/button') {
-        return assign({}, settings, {
-            supports: merge(settings.supports, {
-                color: false,
-            })
-        });
+		return assign({}, settings, {
+			supports: merge(settings.supports, {
+				color: false,
+			})
+		});
 	}
 	
-    // Remove color support from blocks
+	// Remove color support from blocks
 	if (name === 'core/columns') {
-        return assign({}, settings, {
-            category: "text",
-            supports: merge(settings.supports, {
-                align: false,
-                color: false,
-            })
-        });
+		return assign({}, settings, {
+			category: "text",
+			supports: merge(settings.supports, {
+				align: false,
+				color: false,
+			})
+		});
 	}
 	
 	// Core heading block modifications
 	// TODO - removing headings from attr and supports alone doesn't do the trick
 	if (name === "core/heading") {
-        console.log({ settings, name });
-        return assign({}, settings, {
-            attributes: merge(settings.attributes, {
-                content: {
-                    selector: "h2,h3,h4",
-                },
-            }),
-            supports: merge(settings.supports, {
-                color: false,
-                __experimentalSelector: "h2,h3,h4"
-            })
-        });
+		console.log({ settings, name });
+		return assign({}, settings, {
+			attributes: merge(settings.attributes, {
+				content: {
+					selector: "h2,h3,h4",
+				},
+			}),
+			supports: merge(settings.supports, {
+				color: false,
+				__experimentalSelector: "h2,h3,h4"
+			})
+		});
 	}
 	
-    // Remove color support from blocks
+	// Remove color support from blocks
 	if (name === 'core/table') {
-        // console.log({ settings, name });
-        return assign({}, settings, {
-            supports: merge(settings.supports, {
-                color: false,
-            })
-        });
+		// console.log({ settings, name });
+		return assign({}, settings, {
+			supports: merge(settings.supports, {
+				color: false,
+			})
+		});
 	}
 
 	// Core latest posts block modifications - https://wp-qa.com/changing-the-category-for-existing-gutenberg-blocks
