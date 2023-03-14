@@ -1,0 +1,10 @@
+[
+	{
+		"path": "build/blocks/**/index.js",
+		"limit": "100 kB"
+	},
+	{
+		"path": "build/scripts.js",
+		"limit": "100 kB"
+	}
+]

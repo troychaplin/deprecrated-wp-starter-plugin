@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "cu-blocks/example-dynamic",
+	"version": "0.0.0",
+	"title": "Example Dynamic",
+	"category": "text",
+	"icon": "smiley",
+	"description": "Example of a dynamic cu-block",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:../../styles/editor.css",
+	"attributes": {
+		"greyBackground": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

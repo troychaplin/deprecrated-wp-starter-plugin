@@ -1,26 +1,29 @@
 <?php
 /**
- * This file initializes all CU Core components
- */
+* This file initializes all CU Core components
+*/
 
 // If this file is called directly, abort. //
 if (! defined('WPINC')) {
     die;
 }
 
-// Define Our Constants
-define('WPSB_CORE_INC', dirname(__FILE__).'/assets/inc/');
-define('WPSB_CORE_IMG', plugins_url('assets/img/', __FILE__));
-define('WPSB_CORE_CSS', plugins_url('assets/css/', __FILE__));
-define('WPSB_BLOCK_JS', plugins_url('src/', __FILE__));
-define('WPSB_BLOCKS_PATH', dirname(__FILE__).'/build/');
+// Define plugin path constant
+define('MB_PLUGIN_PATH', plugin_dir_url(__FILE__) . '/build');
+define('MB_BLOCK_PATH', dirname(__FILE__) . '/build/blocks');
+define('MB_INCLUDE_PATH', dirname(__FILE__) . '/build/inc');
 
-// Load the Enqueues
-if (file_exists(WPSB_CORE_INC . 'enqueues.php')) {
-    require_once WPSB_CORE_INC . 'enqueues.php';
+// Check for and load block functions
+if (file_exists(MB_INCLUDE_PATH . '/enqueues.php')) {
+    require_once(MB_INCLUDE_PATH . '/enqueues.php');
 }
 
-// Load the Functions
-if (file_exists(WPSB_CORE_INC . 'block-functions.php')) {
-    require_once WPSB_CORE_INC . 'block-functions.php';
+// Check for and load block functions
+if (file_exists(MB_INCLUDE_PATH . '/blocks.php')) {
+    require_once(MB_INCLUDE_PATH . '/blocks.php');
+}
+
+// Check for and load block functions
+if (file_exists(MB_INCLUDE_PATH . '/core-blocks/image.php')) {
+    require_once(MB_INCLUDE_PATH . '/core-blocks/image.php');
 }

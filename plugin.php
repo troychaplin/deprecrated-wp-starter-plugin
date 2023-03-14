@@ -1,12 +1,11 @@
 <?php
 /*
-Plugin Name: Block Starter
+Plugin Name: Multi-Block Starter
 Plugin URI: https://github.com/troychaplin/block-plugin-starter
-Description: Custom blocks starter plugin
+Description: Custom multi-block starter plugin
 Version: 0.0.1
 Author: Troy Chaplin
 Author URI: https://github.com/troychaplin
-Text Domain: tc
 */
 
 // If this file is called directly, abort. //
