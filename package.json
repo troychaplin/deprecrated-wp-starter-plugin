@@ -1,37 +1,57 @@
 {
-	"name": "block-plugin-starter",
+	"name": "wp-starter-plugin",
 	"version": "0.0.1",
-	"description": "Starter gutenberg block plugin",
-	"main": "src/script.js",
+	"description": "Starter multi-block plugin with Tailwind CSS.",
 	"author": "Troy Chaplin",
-	"license": "ISC",
-	"keywords": [
-		"wordpress",
-		"gutengerg",
-		"blocks"
-	],
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "wp-scripts build",
-		"format": "wp-scripts format",
-		"lint:css": "wp-scripts lint-style",
-		"lint:js": "wp-scripts lint-js",
-		"packages-update": "wp-scripts packages-update",
-		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
-	},
-	"homepage": "https://github.com/troychaplin/block-plugin-starter#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/troychaplin/block-plugin-starter.git"
-	},
-	"bugs": {
-		"url": "https://github.com/troychaplin/block-plugin-starter/issues"
+		"build": "yarn format && yarn lint && yarn build:wp && yarn build:css && yarn size",
+		"build:wp": "wp-scripts build --webpack-copy-php",
+		"build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./build/styles/editor.css --postcss --minify",
+		"start": "concurrently 'yarn start:wp' 'yarn start:css'",
+		"start:wp": "wp-scripts start --webpack-copy-php",
+		"start:css": "tailwindcss -i ./src/styles/tailwind.css -o ./build/styles/editor.css --postcss --minify --watch",
+		"format": "wp-scripts format ./src --fix",
+		"lint": "wp-scripts lint-js ./src",
+		"lint:fix": "wp-scripts lint-js ./src --fix",
+		"size": "size-limit",
+		"clean": "rm -rf node_modules ; rm yarn.lock ; yarn install ; yarn build"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^24.5.0"
-	},
-	"dependencies": {
-		"@wordpress/components": "^22.0.0"
+		"@prettier/plugin-php": "^0.19.3",
+		"@size-limit/esbuild": "^8.2.4",
+		"@size-limit/esbuild-why": "^8.2.4",
+		"@size-limit/file": "^8.2.4",
+		"@tailwindcss/aspect-ratio": "^0.4.2",
+		"@tailwindcss/container-queries": "^0.1.0",
+		"@tailwindcss/forms": "^0.5.3",
+		"@tailwindcss/typography": "^0.5.9",
+		"@wordpress/block-editor": "^11.5.0",
+		"@wordpress/blocks": "^12.5.0",
+		"@wordpress/components": "^23.5.0",
+		"@wordpress/core-data": "^6.5.0",
+		"@wordpress/data": "^8.5.0",
+		"@wordpress/date": "^4.28.0",
+		"@wordpress/edit-post": "^7.5.0",
+		"@wordpress/element": "^5.5.0",
+		"@wordpress/eslint-plugin": "^14.1.0",
+		"@wordpress/plugins": "^5.5.0",
+		"@wordpress/prettier-config": "^2.11.0",
+		"@wordpress/scripts": "^25.5.1",
+		"autoprefixer": "^10.4.14",
+		"concurrently": "^7.6.0",
+		"eslint-config-prettier": "^8.7.0",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"eslint-plugin-import": "^2.27.5",
+		"lint-staged": "^13.2.0",
+		"postcss": "^8.4.21",
+		"postcss-import": "^15.1.0",
+		"postcss-nested": "^6.0.1",
+		"postcss-prefix-selector": "^1.16.0",
+		"prettier": "^2.8.4",
+		"size-limit": "^8.2.4",
+		"stylelint": "^15.2.0",
+		"tailwindcss": "^3.2.7"
 	}
 }

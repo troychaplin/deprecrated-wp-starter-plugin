@@ -7,7 +7,7 @@ Starter block plugin for WordPress
 - Drop a copy of this plugin into `wp-content/plugins`
 - In a terminal window navigate to the plugin
 - Run `npm install` to build dependencies
-- When developing run either `npm start` or `yarn start`
+- When developing run either `npm run start` or `yarn start`
 
 ## Resources
 
