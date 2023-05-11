@@ -1,10 +1,10 @@
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@wordpress/blocks'
 
 /**
  * Internal dependencies
  */
-import Edit from './edit';
-import metadata from './block.json';
+import Edit from './edit'
+import metadata from './block.json'
 
 /**
  * Every block starts by registering a new block type definition.
@@ -12,5 +12,5 @@ import metadata from './block.json';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-	edit: Edit,
-});
+  edit: Edit,
+})
